@@ -1,9 +1,11 @@
-import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
-import App from './App.jsx'
+import React from 'react';
+import ReactDOM from 'react-dom';
 
-createRoot(document.getElementById('root')).render(
-  <StrictMode>
-    <App />
-  </StrictMode>,
-)
+// These are same
+const reactElement = React.createElement('h1', null, 'Hello world'); 
+const reactElement2 = <h1>Hello world 2</h1> // using jsx
+
+console.log(reactElement);
+console.log(reactElement2);
+
+ReactDOM.render(reactElement, document.getElementById('root'));
