@@ -1,11 +1,12 @@
-import React from 'react';
+import React from "react";
 import ReactDOM from 'react-dom';
+import App from './App';
 
-// These are same
-const reactElement = React.createElement('h1', null, 'Hello world'); 
-const reactElement2 = <h1>Hello world 2</h1> // using jsx
 
-console.log(reactElement);
-console.log(reactElement2);
+ReactDOM.render(
+    <React.StrictMode>
+        <App />
+    </React.StrictMode>,
+    document.getElementById('root')
+);
 
-ReactDOM.render(reactElement, document.getElementById('root'));
